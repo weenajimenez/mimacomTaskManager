@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_2_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.mimacom.manager.tasklist">
+	<namespace>tlm</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity name="Task" local-service="true">
+
+		<!-- PK fields -->
+
+		<column name="taskId" primary="true" type="long"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+        <column name="title" type="String"></column>
+        <column name="description" type="String"></column>
+        <finder name="UserId" return-type="Collection">
+            <finder-column name="userId"></finder-column>
+        </finder>
+        <finder name="TaskId" return-type="Task">
+            <finder-column name="taskId"></finder-column>
+        </finder>
+        <finder name="UserIdAndGroupId" return-type="Collection">
+            <finder-column name="userId"></finder-column>
+            <finder-column name="groupId"></finder-column>
+        </finder>
+	</entity>
+	<entity name="TaskStatus" local-service="true">
+
+		<!-- PK fields -->
+
+		<!-- Group instance -->
+
+		<!-- Audit fields -->
+		<finder name="TaskId" return-type="Collection">
+			<finder-column name="taskId"></finder-column>
+		</finder>
+		<finder name="Type" return-type="Collection">
+            <finder-column name="userId"></finder-column>
+			<finder-column name="type"></finder-column>
+		</finder>
+		<finder name="Progress" return-type="Collection">
+			<finder-column name="userId"></finder-column>
+			<finder-column name="progress"></finder-column>
+		</finder>
+
+
+		<!-- PK fields -->
+
+		<column name="taskStatusId" primary="true" type="long"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+        <column name="type" type="int"></column>
+        <column name="progress" type="int"></column>
+        <column name="taskId" type="long"></column>
+	</entity>
+</service-builder>

@@ -1,0 +1,94 @@
+.dataTables_length,
+.dataTables_filter
+{
+	text-align: right;
+	padding: 20px;
+	display: inline-block;
+}
+
+.dataTables_filter input[type="search"]
+{
+	outline-offset: 0;
+    border: thin solid #cdced9;
+    margin-left: 10px;
+    -webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.dataTables_paginate.paging_simple_numbers
+{
+	text-align: right;
+}
+
+.dataTables_paginate.paging_simple_numbers a
+{
+	text-decoration: none;
+    color: #272833;
+    padding: 0 30px;
+    cursor: pointer;
+}
+
+.paginate_button.current,
+.dataTables_length select
+{
+	border: thin solid #cdced9;
+    -webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.dataTables_length select
+{
+	padding: 5px;
+}
+
+.data_home
+{
+	text-align: center;
+    width: 100%;
+}
+
+.module_home
+{
+	display: inline-block;
+	padding: 10px;
+    text-align: center;
+    margin: 0 20px 20px 0;
+    -webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	color:#fff;
+}
+
+.module_home i
+{
+	font-size: 20px;
+}
+
+.module_home .title
+{
+	display: block;
+	font-weight: bold;
+    font-size: 20px;
+}
+
+.module_home .number
+{
+	font-size: 15px;
+}
+
+.module_home.total
+{
+	background: #FF5733;
+}
+
+.module_home.finished
+{
+	background: rgb(255, 180, 110);
+}
+
+.module_home.toFinished
+{
+	background: rgb(75, 155, 255);
+}

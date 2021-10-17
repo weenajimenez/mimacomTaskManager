@@ -1,0 +1,4 @@
+Bundle-Name: taks-manager-portlet
+Bundle-SymbolicName: com.mimacom.manager.listTask
+Bundle-Version: 1.0.0
+Export-Package: com.mimacom.manager.listTask.constants
